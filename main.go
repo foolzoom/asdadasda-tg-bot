@@ -61,9 +61,11 @@ func getTgBotConfig() tele.Settings {
 
 func initTgMessageHandlers(bot *tele.Bot) {
 	bot.Handle("/ping", func(c tele.Context) error {
+		println(c.Sender().FirstName + " wrote")
 		return c.Send("Pong!")
 	})
 	bot.Handle("/pong", func(c tele.Context) error {
+		println(c.Sender().FirstName + " wrote")
 		return c.Send("Ping!")
 	})
 }
