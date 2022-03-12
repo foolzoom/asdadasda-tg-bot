@@ -1,0 +1,1 @@
+worker: /go/src/app/main
